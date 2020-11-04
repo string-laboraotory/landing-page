@@ -1,0 +1,109 @@
+@import '../gotham/gotham.css';
+
+.landingPage{
+
+	font-family: 'GothamPro';
+	color: #2A3C7A;
+
+}
+
+@import 'slabswLogin/slabswLogin';
+
+@import 'slabswLogin/login/login';
+@import 'slabswLogin/login/login__container';
+@import 'slabswLogin/login/login__text';
+@import 'slabswLogin/login/login__form';
+@import 'slabswLogin/login/login__label';
+@import 'slabswLogin/login/login__input';
+@import 'slabswLogin/login/login__button';
+
+@import 'slabswLogin/slabswLogin__open';
+@import 'slabswLogin/slabswLogin__title';
+
+
+@import 'banner/banner';
+@import 'banner/logo/logo';
+@import 'banner/logo/logo__container';
+@import 'banner/logo/logo__image';
+
+
+@import 'primaryCards/primaryCards';
+@import 'primaryCards/primaryCards__card';
+@import 'primaryCards/primaryCards__link';
+@import 'primaryCards/primaryCards__contentContainer';
+@import 'primaryCards/primaryCards__titleContainer';
+@import 'primaryCards/primaryCards__title';
+@import 'primaryCards/primaryCards__devisor';
+@import 'primaryCards/primaryCards__text';
+@import 'primaryCards/primaryCards__schedule';
+@import 'primaryCards/primaryCards__scheduleSummary';
+@import 'primaryCards/primaryCards__scheduleTime';
+@import 'primaryCards/flip';
+
+@import 'topic/topic';
+@import 'topic/topic__titleContainer';
+@import 'topic/topic__title';
+@import 'topic/topic__slab';
+
+
+@import 'about/about';
+@import 'about/about__text';
+@import 'about/about__image';
+@import 'about/about__link';
+
+@import 'about/transparency/transparency';
+@import 'about/transparency/transparency__card';
+@import 'about/transparency/transparency__contentContainer';
+@import 'about/transparency/transparency__title';
+@import 'about/transparency/transparency__title';
+@import 'about/transparency/transparency__devisor';
+@import 'about/transparency/transparency__text';
+
+@import 'about/tutors/tutors__picture';
+@import 'about/tutors/tutors__portrait';
+@import 'about/tutors/tutors__name';
+@import 'about/tutors/tutors__description';
+
+
+@import 'products/products';
+@import 'products/products__carouselButton';
+@import 'products/products__soonContainer';
+@import 'products/products__soon';
+@import 'products/products__cardBack';
+@import 'products/products__cardFront';
+@import 'products/products__link';
+@import 'products/products__image';
+@import 'products/products__modalsContainer';
+@import 'products/products__modalsFont';
+
+@import 'contact/contact';
+
+@import 'contact/contact__marketingContainer';
+@import 'contact/contact__marketingTextContainer';
+@import 'contact/contact__marketingText';
+@import 'contact/contact__textEmphasis';
+
+@import 'contact/contact__addressContainer';
+@import 'contact/contact__addressSpan';
+@import 'contact/contact__emailAddress';
+
+@import 'contact/contact__socialMediaAligner';
+@import 'contact/contact__socialMediaContainer';
+@import 'contact/contact__socialMediaIconContainer';
+@import 'contact/contact__socialMediaLink';
+@import 'contact/contact__socialMediaIcon';
+@import 'contact/contact__socialMediaUsername';
+
+@import 'footer/footer';
+@import 'footer/footer__container';
+@import 'footer/footer__contribute';
+@import 'footer/footer__copyright';
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+.contact__emailAddress{
+
+	font-size: 2em;
+	text-decoration: none;
+	color: inherit;
+	font-weight: 600;
+
+	@media (max-width: 1400px){
+
+		font-size: 1.7rem;
+
+	}
+
+	@media (max-width: 1200px){
+
+		font-size: 1.4rem;
+
+	}
+}

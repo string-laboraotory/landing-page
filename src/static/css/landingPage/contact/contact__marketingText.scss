@@ -1,0 +1,19 @@
+.contact__marketingText{
+
+	font-size: 1.3em;
+	font-weight: 100;
+	font-style: italic;
+
+	@media (max-width: 1400px){
+
+		font-size: 1.2rem;		
+
+	}
+
+	@media (max-width: 1200px){
+
+		font-size: 0.9rem;
+
+	}
+
+}

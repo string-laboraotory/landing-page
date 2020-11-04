@@ -1,0 +1,34 @@
+@mixin products__link($color){
+
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 700;
+	color: $color !important;
+	opacity: 100%;
+	transition: 500ms;
+
+	&:hover{
+		opacity: 50%;
+		color: inherit;
+		text-decoration: none;
+	}
+
+	@media (max-width:1400px){
+
+		font-size: 0.8rem;
+
+	}
+
+}
+
+.products__link--minerva{
+	@include products__link(#FD9AFD);
+}
+
+.products__link--activities{
+	@include products__link(#ff8b9c);
+}
+
+.products__link--sw{
+	@include products__link(#ffd100);
+}

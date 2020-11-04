@@ -1,0 +1,15 @@
+.logo{
+
+	position: absolute;
+	display: flex;
+	width: 100%;
+	z-index: 1;
+	top: 0px;
+	margin: 234.5px 0 0;
+
+	@media (max-width: 1300px){
+
+		margin: 200px 0 0;
+
+	}
+}

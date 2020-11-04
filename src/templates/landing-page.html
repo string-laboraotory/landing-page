@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<title>String Laboratory</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='reset.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/landingPage/landingPage.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/alert/alert.css') }}">
+		<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/landingPage/favicon.png') }}">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	</head>
+	<body class="landingPage">
+		<main>
+			<section>
+				<img src="{{ url_for('static', filename='images/landingPage/banner/maker-space.svg') }} " class="banner">
+				<div class="logo">
+					<div class="logo__container">
+						<img src="{{ url_for('static',filename='images/landingPage/banner/SLAB_COLORED.svg') }} " class="logo__image">
+					</div>
+				</div>
+			</section>
+			<section class="topic">
+				<ul class="primaryCards">
+					<li class="primaryCards__card">
+						<a href="http://bit.ly/slab-atividades" target="_blank" class="primaryCards__link">
+							<div class="primaryCards__contentContainer">
+								<div class="primaryCards__titleContainer">
+									<h3 class="primaryCards__title">Inscreva-se</h3>
+								</div>
+								<div class="primaryCards__devisor"></div>
+								<div>
+									<p class="primaryCards__text">
+										Para se inscrever nas atividades de Sexta-Feira, clique no card!
+									</p>
+									<br>
+									<p class="primaryCards__text">
+										As atividades estão somente disponíveis para alunos da Escola Móbile.
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="primaryCards__card">
+						<a href="http://bit.ly/slab-visao-verao-2020" target="_blank" class="primaryCards__link">
+							<div class="primaryCards__contentContainer">
+								<div class="primaryCards__titleContainer">
+									<h3 class="primaryCards__title">Visão</h3>
+								</div>
+								<div class="primaryCards__devisor"></div>
+								<div>
+									<p class="primaryCards__text">
+										Leia o nosso plano de ação para o semestre e descubra como pode ajudar a alcançar os nossos objetivos!
+									</p>
+									<br>
+									<p class="primaryCards__text">
+										 Botar ideias no papel é transformar o potencial da criatividade em metas alcançáveis.
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="primaryCards__card">
+						<a>
+							<div class="primaryCards__contentContainer">
+								<div class="primaryCards__titleContainer">
+									<h3 class="primaryCards__title">Cronograma</h3>
+								</div>
+								<div class="primaryCards__devisor"></div>
+								<div class="primaryCards__text">
+									<table class="primaryCards__schedule">
+										<thead>
+											<tr>
+												<th>Evento</th>
+												<th>Data</th>
+											</tr>
+										</thead>
+										<tbody>
+											{% for event in next_events %}
+											<tr primaryCards__schedule>
+												<td class="primaryCards__scheduleSummary">
+													{{ event[0] }}
+												</td>
+												<td class="primaryCards__scheduleTime">
+													{{ event[1] }}
+													{{ event[2] }} - {{ event[3] }}
+												</td>
+											</tr>
+											{% endfor %}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<section class="topic about">
+				<div id="slabInfo" class="carousel slide carouselTemplate" data-ride="carousel" data-interval="10000">
+				  <ol class="carousel-indicators">
+				    <li data-target="#slabInfo" data-slide-to="0" class="active"></li>
+				    <li data-target="#slabInfo" data-slide-to="1"></li>
+				    <li data-target="#slabInfo" data-slide-to="2"></li>
+				    <li data-target="#slabInfo" data-slide-to="3"></li>
+				  </ol>
+				  <div class="carousel-inner">
+				    <article class="carousel-item active">
+				      	<div class="topic__titleContainer">
+							<h2 class="topic__title">Fundação</h2>
+							<h4 class="topic__slab">String Lab</h4>
+						</div>
+						<div>
+							<div class="container">
+								<div class="row">
+									<div class="col colPadding">
+										<p class="about__text">
+											Olá, viajante! Desbravando fronteiras nunca antes exploradas? Tentando pegar o fio da meada do String Lab? Bem, deixe-me aproveitar a ocasião e contar um velho conto sobre a fundação desse clube de STEM.
+										</p>
+										<p class="about__text">
+											Era uma vez... na verdade, era Dezembro de 2018 e João Pedro Barreto buscava maneiras de aplicar sua paixão por ciências, tecnologia, engenharia e matemática de alguma forma que impactasse a sua comunidade. Conversando com um orientador seu e, posteriormente, com o Felipe Dimantas, surgiu a ideia de se criar um espaço na Móbile para falar mais sobre essas diversas áreas. A ideia ficou bem guardada para que começasse a ser implementada no início de 2019. Enquanto isso, João começava um estágio voluntário no <a href="http://www.institutofour.org" class="about__link">Instituto Four</a>, que tem como missão formar jovens líderes para ocuparem os principais espaços de tomada de decisão do Brasil.
+										</p>
+										<p class="about__text">
+											O estágio acabou e a ideia do clube foi se arrastando ao longo do primeiro semestre...
+										</p>
+										<a class="about__link" href="https://bit.ly/38p7NjB" target="_blank">
+											<span>Continue lendo!</span>
+										</a>
+									</div>
+									<div class="col">
+										<img src="{{ url_for('static', filename='images/landingPage/about/fundacao.svg') }}" class="about__image">
+									</div>
+								</div>
+							</div>
+						</div>
+				    </article>
+				    <article class="carousel-item">
+				      	<div class="topic__titleContainer">
+							<h2 class="topic__title">Propósito</h2>
+							<h4 class="topic__slab">String Lab</h4>
+						</div>
+						<div class="container">
+							<div class="row">
+								<div class="col colPadding">
+									<p class="about__text">
+										O String Lab tem como objetivo proporcionar um ambiente para desenvolvimento de habilidades técnicas e comportamentais relacionadas a STEM (ciência, tecnologia, engenharia e matemática), sem distinção de capacitação prévia, para o Ensino Médio. Todos os integrantes devem sempre estar comprometidos com a exploração, a colaboratividade  e um desenvolvimento voltado para a comunidade, seja essa a própria Escola Móbile, o bairro de Moema, a cidade de São Paulo, o Brasil ou diferentes países por meio da criação de apps, jogos, oficinas e conferências.
+									</p>
+									<p class="about__text">
+										Para o cumprimento de seus objetivos, o SLab disponibiliza um espaço e um orientador para a realização de projetos e atividades que envolvam innovative, design e critical thinking, DIY (Do It Yourself) e technical skills por meio do incentivo a olimpíadas nacionais e regionais para os membros, aulas de programação em diversas línguas (Python, JavaScript, HTML5, Arduino IDE) com aplicação em empreendedorismo social ou pessoal, competições de batalha de robôs, Hackathons (maratonas de programação), administração e outros.
+									</p>
+									</div>
+								<div class="col">
+									<img src="{{ url_for('static', filename='images/landingPage/about/purpose.svg')}}" class="about__image">
+								</div>
+							</div>
+						</div>
+				    </article>
+				    <article class="carousel-item">
+				      	<div class="topic__titleContainer">
+							<h2 class="topic__title">Transparência</h2>
+							<h4 class="topic__slab">String Lab</h4>
+						</div>
+						<div class="container">
+							<div class="row">
+								<div class="col colPadding">
+									<ul class="transparency">
+										<li class="transparency__card">
+											<a href="https://bit.ly/transparencia-slab" target="_blank" class="primaryCards__link">
+												<div class="transparency__contentContainer">
+													<div class="primaryCards__titleContainer">
+														<h3 class="transparency__title">Pasta Aberta</h3>
+													</div>
+													<div class="transparency__devisor"></div>
+													<div>
+														<p class="transparency__text">
+															Clique aqui para ter acesso a todos os arquivos abertos do String Lab.
+														</p>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li class="transparency__card">
+											<a href="https://bit.ly/slab-estatuto" target="_blank" class="primaryCards__link">
+												<div class="transparency__contentContainer">
+													<div class="primaryCards__titleContainer">
+														<h3 class="transparency__title">Estatuto</h3>
+													</div>
+													<div class="transparency__devisor"></div>
+													<div>
+														<p class="transparency__text">
+															Aqui você pode ler o estatuto do clube e entender quais são os nossos valores e regras!
+														</p>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li class="transparency__card">
+											<a href="http://bit.ly/slab-atividades" target="_blank" class="primaryCards__link">
+												<div class="transparency__contentContainer">
+													<div class="primaryCards__titleContainer">
+														<h3 class="transparency__title">Financeiro</h3>
+													</div>
+													<div class="transparency__devisor"></div>
+													<div>
+														<p class="transparency__text">
+															Aqui você tem acesso orçamento do String Lab para o ano.
+														</p>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li class="transparency__card">
+											<a href="https://bit.ly/slab-aulas" target="_blank" class="primaryCards__link">
+												<div class="transparency__contentContainer">
+													<div class="primaryCards__titleContainer">
+														<h3 class="transparency__title">Aulas</h3>
+													</div>
+													<div class="transparency__devisor"></div>
+													<div>
+														<p class="transparency__text">
+															Aqui você pode encontrar todos os slides das nossas aulas!
+														</p>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col">
+									<img src="{{ url_for('static', filename='images/landingPage/about/transparency.svg')}}" class="about__image">
+								</div>
+							</div>
+						</div>
+				    </article>
+				    <article class="carousel-item">
+				      	<div class="topic__titleContainer">
+							<h2 class="topic__title">Tutores</h2>
+							<h4 class="topic__slab">String Lab</h4>
+						</div>
+						<div class="container">
+							<div class="row pt-5">
+								<div class="mt-4 col-lg-3 text-center">
+									<picture class="tutors__picture">
+										<div class="rounded-circle tutors__portrait tutors__portrait--luigi"></div>
+									</picture>
+									<h3 class="tutors__name mt-4">Luigi Rigato</h3>
+								</div>
+								<div class="mt-4 col-lg-3 text-center">
+									<picture class="tutors__picture">
+										<div class="rounded-circle tutors__portrait tutors__portrait--lucas"></div>
+									</picture>
+									<h3 class="tutors__name mt-4">Lucas Teles</h3>
+								</div>
+								<div class="mt-4 col-lg-3 text-center">
+									<picture class="tutors__picture">
+										<div class="rounded-circle tutors__portrait tutors__portrait--mila"></div>
+									</picture>
+									<h3 class="tutors__name mt-4">Mila Tabach</h3>
+								</div>
+								<div class="mt-4 col-lg-3 text-center">
+									<picture class="tutors__picture">
+										<div class="rounded-circle tutors__portrait tutors__portrait--leonardo"></div>
+									</picture>
+									<h3 class="tutors__name mt-4">Leonardo Lanfranchi</h3>
+								</div>
+								<div class="mt-4 col-lg-3 text-center">
+									<picture class="tutors__picture">
+										<div class="rounded-circle tutors__portrait tutors__portrait--gustavo"></div>
+									</picture>
+									<h3 class="tutors__name mt-4">Gustavo Ganança</h3>
+								</div>
+								<div class="mt-4 col-lg-3 text-center">
+									<picture class="tutors__picture">
+										<div class="rounded-circle tutors__portrait tutors__portrait--arthur"></div>
+									</picture>
+									<h3 class="tutors__name mt-4">Arthur Abdo</h3>
+								</div>
+								<div class="mt-4 col-lg-3 text-center">
+									<picture class="tutors__picture">
+										<div class="rounded-circle tutors__portrait tutors__portrait--thiago"></div>
+									</picture>
+									<h3 class="tutors__name mt-4">Thiago Godoi</h3>
+								</div>
+							</div>
+						</div>
+				    </div>
+				  </article>
+				  <a class="carousel-control-prev carousel-prev-control-link" href="#slabInfo" role="button" data-slide="prev">
+				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="carousel-control-next carousel-next-control-link" href="#slabInfo" role="button" data-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</section>
+			<section class="topic">
+				<div class="topic__titleContainer">
+					<h2 class="topic__title">Produtos</h2>
+					<h4 class="topic__slab">String Lab</h4>
+				</div>
+			</section>
+			<div class="container text-center products m-0 mb-5 p-0">
+	            <div class="row mx-auto my-auto row-width-max">
+	                <div id="recipeCarousel" class="carousel slide w-100" data-interval="false">
+	                    <div class="carousel-inner w-100" role="listbox">
+	                        <div class="carousel-item active ">
+	                            <div class="col-md-4">
+	                            	<div class="card card-flip h-100 border-0 min-card-height">
+	                            		<div class="card-front">
+			                                <div class="card-body products__cardFront h-100">
+			                                	<!-- Minerva -->
+			                                    <img class="img-fluid products__image" src="{{ url_for('static', filename='images/landingPage/products/minerva.svg') }}">
+			                                </div>
+			                            </div>
+			                            <div class="card-back products__cardBack">
+			                            	<div class="card-body border-0">
+			                                    <p>
+				                                    O Projeto Minerva abriga times de desenvolvimento de software compostos por um engajado, criativo e seleto grupo de alunos do Ensino Médio. Cada aluno é submetido a um processo seletivo, que filtra os alunos mais engajados e curiosos, antes de entrarem no Minerva. Cada time pode escolher o software que será desenvolvido: um jogo, um app, um site? A participação dura cerca de um ano e ao final, o time entrega um produto monetizável que contribuirá com a sustentabilidade financeira do SLab!
+				                                </p>
+			                                    <p>
+				                                    Quer saber mais sobre o Minerva e seus participantes? <a class="products__link--minerva" data-toggle="modal" data-target="#minervaModal">Clique aqui!</a>
+				                                </p>
+			                                </div>
+			                            </div>
+		                            </div>
+								</div>
+	                        </div>
+	                        <div class="carousel-item">
+	                            <div class="col-md-4">
+	                            	<div class="card card-flip h-100 border-0 min-card-height">
+	                            		<div class="card-front">
+			                                <div class="card-body h-100 products__cardFront">
+                                				<!-- Atividades -->
+                                    			<img class="img-fluid products__image" src="{{ url_for('static', filename='images/landingPage/products/activities.svg') }}">
+	                                    	</div>
+	                                    </div>
+	                                    <div class="card-back products__cardBack">
+			                            	<div class="card-body border-0">
+			                                    <p>
+				                                    As atividades são aulas e discussões sobre temas dentro de ciência, tecnologia, engenharia, matemática, business e design. Trazemos tópicos super interessantes que normalmente não são discutidos na sala de aula, mas que tornam STEM um pouquinho mais mágico.
+				                                </p>
+			                                    <p>
+				                                    Você pode ver mais sobre as atividades no nosso <a href="https://www.youtube.com/channel/UCnro0a9VgTgUWJd64qLb9pQ?view_as=subscriber" class="products__link--activities" target="_blank">canal no YouTube</a> ou <a href="http://bit.ly/slab-atividades" class="products__link--activities" target="_blank">se inscrever</a> para os nossos encontros presenciais de Sexta-Feira, às 15:30 na Sala Maker!
+				                                </p>
+			                                </div>
+			                            </div>
+	                                </div>
+	                            </div>
+							</div>
+							<div class="carousel-item">
+	                            <div class="col-md-4">
+	                                <div class="card card-flip h-100 border-0 min-card-height">
+	                            		<div class="card-front">
+			                                <div class="card-body h-100 products__cardFront">
+	                                    		<span>SW</span>
+	                                    	</div>
+	                                    </div>
+	                                    <div class="card-back products__cardBack">
+			                            	<div class="card-body border-0">
+			                                    <p>
+				                                    A cada dia, nós do SLab tentamos nos reiventar para impactar positivamente alunos de Ensino Médio. Entendemos que a educação básica é fundamental, mas não acessível ou de qualidade para a maioria da população brasileira.  Com isso surgiu o String Laboratory Social Workshops, uma iniciativa do SLab para promover uma exploração diferente do que se vê na sala de aula, que procura atingir alunos de escola pública
+				                                </p>
+			                                    <p>
+				                                    Quer saber mais sobre o SLab SW? <a class="products__link--sw" data-toggle="modal" data-target="#swModal">Clique aqui!</a>
+				                                </p>
+			                                </div>
+			                            </div>
+	                                </div>
+								</div>
+	                        </div>
+	                        <div class="carousel-item">
+	                            <div class="col-md-4">
+	                                <div class="card card-body border-0 h-100 min-card-height">
+	                                	<div class="products__soonContainer">
+		                                	<span class="products__soon">Em Breve</span>
+		                                </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <a class="carousel-control-prev w-auto carousel-control-prev-m" href="#recipeCarousel" role="button" data-slide="prev">
+	                    	<div class="rounded-circle product__carouselButton">
+		                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		                        <span class="sr-only">Previous</span>
+		                    </div>
+	                    </a>
+	                    <a class="carousel-control-next w-auto carousel-control-next-m" href="#recipeCarousel" role="button" data-slide="next">
+	                    	<div class="rounded-circle product__carouselButton">
+		                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		                        <span class="sr-only">Next</span>
+		                    </div>
+	                    </a>
+	                </div>
+	            </div>
+			</div>
+			<section class="topic">
+				<div class="topic__titleContainer">
+					<h2 class="topic__title">Contato</h2>
+					<h4 class="topic__slab">String Lab</h4>
+				</div>
+				<div class="contact">
+					<div class="contact__marketingContainer">
+						<div class="contact__marketingTextContainer">
+							<p class="contact__marketingText">
+								<em class="contact__textEmphasis">Dá um follow</em> nas nossas redes sociais pra ficar atualizado!
+							</p>
+						</div>
+						<div class="contact__addressContainer">
+							<span class="contact__addressSpan">Email:</span>
+							<address>
+								<a  href='mailto:string.laboratory000@gmail.com' class="contact__emailAddress">
+									string.laboratory000@gmail.com
+								</a>
+							</address>
+						</div>
+					</div>
+					<div class="contact__socialMediaAligner">
+						<div class="contact__socialMediaContainer">
+							<div class="contact__socialMediaIconContainer">
+								<a href="https://www.instagram.com/string.laboratory/" class="contact__socialMediaLink" target="_blank">
+									<img src="{{url_for('static',filename='images/landingPage/redes-sociais/instagram.svg')}}" class="contact__socialMediaIcon">
+								</a>
+								<a href="https://www.facebook.com/stringlaboratory/" class="contact__socialMediaLink" target="_blank">
+									<img src="{{url_for('static',filename='images/landingPage/redes-sociais/facebook.svg')}}" class="contact__socialMediaIcon">
+								</a>
+								<a href="https://www.youtube.com/channel/UCnro0a9VgTgUWJd64qLb9pQ?view_as=subscriber" class="contact__socialMediaLink" target="_blank">
+									<img src="{{url_for('static',filename='images/landingPage/redes-sociais/youtube.svg') }}" class="contact__socialMediaIcon">
+								</a>
+							</div>
+							<span class="contact__socialMediaUsername">@string.laboratory</span>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<article class="modal fade" id="minervaModal" tabindex="-1" aria-labelledby="minervaLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content products__modalsContainer">
+						<div class="modal-header">
+							<h5 class="modal-title">Minverva</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p class="products__modalsFont">O Minerva de 2020 começou em Fevereiro, composto por 7 integrantes: 2 designers, 3 desenvolvedores e 2 administradores. A proposta era desenvolver um jogo do zero usando a ferramenta de desenvolvimento Unity. Eles receberam acesso à uma plataforma de ensino, a Alura.</p>
+							<p class="products__modalsFont">Lá, desenvolveram suas habilidades nas respectivas áreas, aprendendo C#, Unity, design e métodos de gestão de projetos de software. O jogo ainda está sendo desenvolvido e logo daremos mais updates sobre o processo :)</p>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="modal fade" id="swModal" tabindex="-1" aria-labelledby="swLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content products__modalsContainer">
+						<div class="modal-header">
+							<h5 class="modal-title">SLab Social Workshops</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p class="products__modalsFont">
+								A cada dia, nós do SLab tentamos nos reiventar para impactar positivamente alunos de Ensino Médio. Entendemos que a educação básica é fundamental, mas não acessível ou de qualidade para a maioria da população brasileira.
+							</p>
+							<p class="products__modalsFont">
+								Com isso surgiu o, uma iniciativa do SLab para promover uma exploração diferente do que se vê na sala de aula, que procura atingir alunos de escola pública. A ideia é que esses alunos interessados em STEM tenham acesso a ferramentas, materiais e a uma educação que só seria possível com um espaço como a Sala Maker, na Escola Móbile. As atividades de programação, design, criatividade e colaboração são montadas de modo que eles continuem se engajando e se desenvolvendo na área, tanto autonomamente, após os encontros, quanto com a ajuda do SLab. Assim, esperamos que mais estudantes de ensino médio persigam os seus sonhos de impactar a comunidade que os cerca por meio de STEM.
+							</p>
+							<p class="products__modalsFont">
+								Visando a acompanhar o crescimento dos alunos e criar uma cultura de aprendizado contínuo após os encontros, o site do String Lab SW foi criado. Os participantes ganham acesso a um ambiente rico em conteúdo de ciências, tecnologia, engenharia e matemática. De artigos, a vídeos, a projetos hands-on, há uma variedade formas que os estudantes possam ir além dos encontros mensais.
+							</p>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__contribute">
+					<a href="https://github.com/string-laboraotory/landing-page" target="_blank">Contribua no GitHub!</a>
+				</div>
+				<copyright class="footer__copyright">
+					<a href="http://opensource.org/licenses/mit-license.php">Copyright 2020 © String Laboratory. MIT License</a>
+				</copyright>
+			</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<script src="{{ url_for('static', filename='productCarousel.js') }}"></script>
+	</body>
+</html>
+
+
+
