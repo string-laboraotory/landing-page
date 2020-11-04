@@ -1,0 +1,63 @@
+/* display 3 */
+@media (min-width: 768px) {
+
+    .products .carousel-inner .carousel-item.active,
+    .products .carousel-inner .carousel-item-next,
+    .products .carousel-inner .carousel-item-prev {
+        display: flex;
+    }
+    
+    .products .carousel-inner .carousel-item-right.active,
+    .products .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
+    }
+    
+    .products .carousel-inner .carousel-item-left.active, 
+    .products .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+    }
+}
+
+.products .carousel-inner .carousel-item-right,
+.products .carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+
+.products .col-md-4{
+    padding: 0 !important;
+}
+
+.products .card-body{
+    padding: 0 !important;
+}
+
+.carousel-control-prev-m{
+
+    padding: 0 0 0 24px;
+    @media (max-width:1400px){
+        margin-left: 0 0 0 12px;
+    }
+
+}
+
+.carousel-control-next-m{
+
+    padding: 0 24px 0 0;
+    @media (max-width:1400px){
+        margin-right: 0 12px 0 0;
+    }
+
+}
+
+.products{
+    margin-bottom: 30px;
+}
+
+
+.min-card-height{
+    min-height: 500px !important;
+}
+
+.row-width-max{
+    width: 100vw !important;
+}

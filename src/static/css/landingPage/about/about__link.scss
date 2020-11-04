@@ -1,0 +1,14 @@
+.about__link{
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 400;
+	color: #2A3C7A;
+	opacity: 100%;
+	transition: 500ms;
+
+	&:hover{
+		opacity: 50%;
+		color: inherit;
+		text-decoration: none;
+	}
+}

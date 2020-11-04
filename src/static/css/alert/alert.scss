@@ -1,0 +1,56 @@
+@-webkit-keyframes slideInRight {
+    0%, 100% { -webkit-transform: translateX(300px); }
+    10%, 90% { -webkit-transform: translateX(10px); }
+}
+@-moz-keyframes slideInRight {
+    0%, 100% { -moz-transform: translateX(300px); }
+    10%, 90% { -moz-transform: translateX(10px); }
+}
+
+.alert_{
+
+	position: absolute;
+	right: -10px;
+	top: 100px;
+	width: 15%;
+	display: inline-block;
+	width: 20%;
+	z-index: 2;
+	
+	-webkit-transform: translateX(300px);
+    -webkit-animation: slideInRight 2.5s 0.5s 1 ease forwards;
+    -moz-transform:    translateX(300px);
+    -moz-animation:    slideInRight 2.5s 0.5s 1 ease forwards;
+
+}
+
+@-webkit-keyframes slideDown {
+    0%, 100% { -webkit-transform: translateY(-70px); }
+    10%, 90% { -webkit-transform: translateY(-10px); }
+}
+@-moz-keyframes slideDown {
+    0%, 100% { -moz-transform: translateY(-70px); }
+    10%, 90% { -moz-transform: translateY(-10px); }
+}
+
+.alert_--tutor{
+
+	position: absolute;
+	margin: 0 auto;
+	top: 0px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	z-index: 2;
+	
+	-webkit-transform: translateY(-70px);
+    -webkit-animation: slideDown 2.5s 0.5s 1 ease forwards;
+    -moz-transform:    translateY(-70px);
+    -moz-animation:    slideDown 2.5s 0.5s 1 ease forwards;
+
+}
+
+@import 'alert__error';
+@import 'alert__success';
+@import 'alert__flash';

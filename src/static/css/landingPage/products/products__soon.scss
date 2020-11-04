@@ -1,0 +1,19 @@
+.products__soon{
+	color: white;
+	font-size: 6rem;
+	font-weight: 700;
+
+	@media (max-width:1400px){
+
+		font-size: 5.5rem;
+		padding: 40px 70px;
+
+	}
+
+	@media (max-width:1300px){
+
+		font-size: 5rem;
+		padding: 40px 70px;
+
+	}
+}
