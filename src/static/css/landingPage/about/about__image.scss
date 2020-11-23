@@ -1,9 +1,11 @@
 .about__image{
 
 	width: 100%;
+	min-width: 200px;
 
 	@media (max-width: 768px){
 		width: 50%;
+		margin-bottom: 5rem;
 	}
 
 }

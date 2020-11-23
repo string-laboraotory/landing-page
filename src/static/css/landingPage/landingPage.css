@@ -274,13 +274,16 @@ flip card
       display: none; } }
 
 .about .carousel {
-  min-height: 700px; }
+  min-height: 500px; }
 
 .colPadding {
   padding: 40px 0 16px; }
 
 .containerPadding {
   padding: 40px 0 0; }
+
+.sectionCarousel {
+  max-height: 400px; }
 
 .about .carousel-control-next-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232A3C7A' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important; }
@@ -319,10 +322,12 @@ flip card
       font-size: 0.75rem; } }
 
 .about__image {
-  width: 100%; }
+  width: 100%;
+  min-width: 200px; }
   @media (max-width: 768px) {
     .about__image {
-      width: 50%; } }
+      width: 50%;
+      margin-bottom: 5rem; } }
 
 .about__link {
   text-decoration: none;
