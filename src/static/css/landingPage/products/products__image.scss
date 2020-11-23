@@ -1,3 +1,8 @@
 .products__image{
 	width: 50%;
+	min-width: 200px;
+
+	@media (max-width: 945px){
+		width: 25%;
+	}
 }

@@ -5,4 +5,16 @@
 	font-size: 1.5em;
 	text-transform: uppercase;
 
+	@media (max-width: 961px){
+
+		font-size: 0.8rem;
+		
+	}
+
+	@media (max-width: 540px){
+
+		display: none;
+		
+	}
+
 }

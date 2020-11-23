@@ -2,4 +2,9 @@
 
 	padding: 20px 24px;
 
+	@media (max-width: 540px){
+		padding: 10px 12px;
+	}
+
+
 }

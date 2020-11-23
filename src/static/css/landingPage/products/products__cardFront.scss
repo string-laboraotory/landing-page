@@ -8,4 +8,16 @@
 	align-items: center;
 	justify-content: center;
 
+	@media (max-width: 961px){
+		font-size: 7rem;
+	}
+
+	@media (max-width: 945px){
+        font-size: 12rem;
+	}
+
+	@media (max-width: 540px){
+        font-size: 9rem;
+	}
+
 }

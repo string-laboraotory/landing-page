@@ -7,6 +7,7 @@
 	box-shadow: 2px 3px 6px 1px #AAAAAA;
 	transition: 500ms;
 	margin-bottom: 20px;
+	list-style: none;
 
 	&:hover{
 
@@ -21,4 +22,8 @@
 
 	}
 	
+	@media (max-width: 540px){
+		border-radius: 15px;
+	}
+
 }

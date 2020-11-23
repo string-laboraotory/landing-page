@@ -1,45 +1,6 @@
 .primaryCards__schedule{
 
-	width: 100%;
-	font-style: initial;
-	line-height: 1.8rem;
+	color: inherit !important;
+	font-style: normal;
 
-	th{
-
-		font-size: 1.5rem;
-		text-align: left;
-		font-weight: 400;
-		padding: 0.5rem 0.5rem 0.5rem 0;
-		width: 50%;
-
-	}
-
-	td{
-
-		text-align: left;
-		line-height: 1.5rem;
-		padding: 0.5rem 0.5rem 0.5rem 0;
-
-	}
-
-	@media (max-width: 1400px){
-
-		line-height: 1.5rem;
-
-		th{
-
-			font-size: 1.3rem;
-
-		}
-	}
-
-	@media (max-width: 1200px){
-
-		line-height: 1.5rem;
-
-		th{
-			font-size: 1.1rem;
-		}
-
-	}
 }
