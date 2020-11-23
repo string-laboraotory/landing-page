@@ -3,4 +3,11 @@
 	font-weight: 700;
 	color: #2A3C7A;	
 	margin-bottom: 0;
+	@media (max-width: 1141px){
+		font-size: 0.85rem;
+	}
+
+	@media (max-width: 961px){
+		font-size: 0.75rem;
+	}
 }

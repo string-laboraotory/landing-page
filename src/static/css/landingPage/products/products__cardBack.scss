@@ -21,4 +21,15 @@
 
 	}
 
+	@media (max-width: 945px){
+        font-size: 1.25rem;
+	}
+
+	@media (max-width: 760px){
+        font-size: 1rem;
+	}
+
+	@media (max-width: 540px){
+        font-size: 0.75rem;
+	}
 }

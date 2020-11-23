@@ -1,21 +1,24 @@
-$('.products #recipeCarousel').carousel({
-interval: false
-})
-
-$('.products .carousel .carousel-item').each(function(){
-var minPerSlide = 3;
-var next = $(this).next();
-if (!next.length) {
-next = $(this).siblings(':first');
-}
-next.children(':first-child').clone().appendTo($(this));
-
-for (var i=0;i<minPerSlide;i++) {
-    next=next.next();
-    if (!next.length) {
-        next = $(this).siblings(':first');
+new Glider(document.querySelector('.glider'), {
+  // Mobile-first defaults
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  scrollLock: true,
+  dots: '#resp-dots',
+  arrows: {
+    prev: '.glider-prev',
+    next: '.glider-next'
+  },
+  responsive: [
+    {
+      // screens greater than >= 775px
+      breakpoint: 945,
+      settings: {
+        // Set to `auto` and provide item width to adjust to viewport
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        itemWidth: 150,
+        duration: 0.25
+      }
     }
-    
-    next.children(':first-child').clone().appendTo($(this));
-  }
+  ]
 });
