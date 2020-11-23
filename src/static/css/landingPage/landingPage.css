@@ -323,7 +323,8 @@ flip card
 
 .about__image {
   width: 100%;
-  min-width: 200px; }
+  min-width: 200px;
+  max-height: 300px; }
   @media (max-width: 768px) {
     .about__image {
       width: 50%;
