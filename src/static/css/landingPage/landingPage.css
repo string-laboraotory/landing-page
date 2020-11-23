@@ -322,8 +322,7 @@ flip card
   width: 100%; }
   @media (max-width: 768px) {
     .about__image {
-      width: 50%;
-      margin-bottom: 5rem; } }
+      width: 50%; } }
 
 .about__link {
   text-decoration: none;
